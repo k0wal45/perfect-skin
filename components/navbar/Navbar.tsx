@@ -3,16 +3,17 @@ import Link from "next/link";
 import { useState } from "react";
 import "./hamburger.css";
 import { FaAddressCard, FaFacebook, FaInstagram } from "react-icons/fa";
-import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 import { PiPencilCircle } from "react-icons/pi";
 import { MdOutlineWeb } from "react-icons/md";
+import { courgette } from "../Fonts";
 const Navbar = () => {
 	const { scrollY } = useScroll();
 
 	const [visible, setVisible] = useState(false);
 	const [hidden, setHidden] = useState(false);
+	const [onTop, setOnTop] = useState(true);
 
 	useMotionValueEvent(scrollY, "change", (latest: any) => {
 		const previous: any = scrollY.getPrevious();
@@ -21,7 +22,14 @@ const Navbar = () => {
 		} else {
 			setHidden(false);
 		}
+    if (latest > 100) {
+      setOnTop(false)
+    } else {
+      setOnTop(true)
+      
+    }
 	});
+
 
 	return (
 		<motion.nav
@@ -31,19 +39,26 @@ const Navbar = () => {
 			}}
 			animate={hidden ? "hidden" : "visible"}
 			transition={{ duration: 0.35, ease: "easeInOut" }}
-			className="fixed top-0 left-0  w-full px-4 z-4 flex justify-between items-center lg:px-20 z-40 bg-white"
+			className={` ${onTop ? 'bg-white' : 'bg-primary'} fixed top-0 left-0  w-full px-4 z-4 flex justify-between items-center lg:px-20 z-40 transition-all duration-700`}
 		>
 			<Link
 				href="/"
 				className="flex justify-center items-center p-4 gap-4 z-50"
 			>
-				<h2
-					className={`whitespace-nowrap text-2xl md:text-4xl font-[800] mt-[5px] transition-color duration-150 ${
-						visible ? "text-white" : "text-black"
-					}`}
-				>
-					Lunaris Web
-				</h2>
+				<div className="flex flex-col items-start justify-center">
+					<h2
+						className={`${courgette.className} whitespace-nowrap text-3xl md:text-5xl mt-[5px] transition-color duration-150 ${
+							visible ? "text-white" : "text-black"
+						}`}
+					>
+						Perfect Skin
+					</h2>
+					<p className={`uppercase ${
+							visible ? "text-white" : "text-black"
+						}`}>
+						centrum kosmetologii
+					</p>
+				</div>
 			</Link>
 			<label className="flex lg:hidden z-50">
 				<input
