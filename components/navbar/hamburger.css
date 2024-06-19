@@ -39,7 +39,6 @@
     transform-origin:bottom;
     transform:rotatez(45deg) translate(5px,0px);
     width: 100%;
-    background: #fff;
 
 
   }
@@ -49,7 +48,6 @@
     
     transform-origin:top;
     transform:rotatez(-45deg) translate(5px,0px);
-    background: #fff;
 
   }
   

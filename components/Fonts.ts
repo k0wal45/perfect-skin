@@ -1,7 +1,7 @@
-import { Courgette } from "next/font/google";
+import { Noto_Serif } from "next/font/google";
 
 
-export const courgette = Courgette({
+export const noto = Noto_Serif({
     weight: "400" ,
     style: "normal" ,
     subsets: ["latin"],

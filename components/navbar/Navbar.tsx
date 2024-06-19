@@ -1,14 +1,16 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./hamburger.css";
-import { FaAddressCard, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaShoppingCart } from "react-icons/fa";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
-import { PiPencilCircle } from "react-icons/pi";
 import { MdOutlineWeb } from "react-icons/md";
-import { courgette } from "../Fonts";
+import BtnLink from "../reusable/BtnLink";
+import { noto } from "../Fonts";
 const Navbar = () => {
+
+	const hamburger = useRef<HTMLInputElement>(null);
 	const { scrollY } = useScroll();
 
 	const [visible, setVisible] = useState(false);
@@ -22,7 +24,7 @@ const Navbar = () => {
 		} else {
 			setHidden(false);
 		}
-    if (latest > 100) {
+    if (latest > 50) {
       setOnTop(false)
     } else {
       setOnTop(true)
@@ -30,6 +32,13 @@ const Navbar = () => {
     }
 	});
 
+
+  const handleLinkClick = () => {
+    setVisible(false);
+    if (hamburger.current) {
+      hamburger.current.checked = false;
+    }
+  };
 
 	return (
 		<motion.nav
@@ -39,29 +48,25 @@ const Navbar = () => {
 			}}
 			animate={hidden ? "hidden" : "visible"}
 			transition={{ duration: 0.35, ease: "easeInOut" }}
-			className={` ${onTop ? 'bg-white' : 'bg-primary'} fixed top-0 left-0  w-full px-4 z-4 flex justify-between items-center lg:px-20 z-40 transition-all duration-700`}
+			className={` ${onTop ? 'bg-transparent' : 'bg-white'} fixed top-0 left-0  w-full px-4 z-4 flex justify-between items-center lg:px-20 z-40 transition-all duration-700`}
 		>
 			<Link
 				href="/"
-				className="flex justify-center items-center p-4 gap-4 z-50"
+				className="flex justify-center items-center p-4 gap-4 z-30"
 			>
 				<div className="flex flex-col items-start justify-center">
 					<h2
-						className={`${courgette.className} whitespace-nowrap text-3xl md:text-5xl mt-[5px] transition-color duration-150 ${
-							visible ? "text-white" : "text-black"
-						}`}
+						className={`${noto.className} whitespace-nowrap text-3xl md:text-5xl mt-[5px] transition-color duration-150`}
 					>
 						Perfect Skin
 					</h2>
-					<p className={`uppercase ${
-							visible ? "text-white" : "text-black"
-						}`}>
+					<p className={`uppercase `}>
 						centrum kosmetologii
 					</p>
 				</div>
 			</Link>
 			<label className="flex lg:hidden z-50">
-				<input
+				<input ref={hamburger}
 					type="checkbox"
 					id="check"
 					onClick={(e: any) => {
@@ -75,36 +80,28 @@ const Navbar = () => {
 			</label>
 
 			<div
-				className={`fixed top-0 right-0 h-screen w-screen bg-black pt-32 bg-opacity-90 border-l-2 border-white transition-all duration-1000 origin-right ease-in-out
+				className={`fixed top-0 right-0 h-screen w-fit bg-white pt-32 border-l-2 border-black transition-all duration-1000 origin-right ease-in-out z-40
         ${visible ? "scale-x-1" : "scale-x-0"}
       `}
 			>
-				<ul className="flex flex-col justify-center items-center gap-8 text-xl font-bold text-white">
+				<ul className="flex flex-col justify-center items-end gap-8 text-xl font-bold text-black p-8">
 					<li>
-						<Link href="/">Strona Główna</Link>
+						<Link onClick={handleLinkClick} href="/">Strona Główna</Link>
 					</li>
 					<li>
-						<Link href="/omnie">O Mnie</Link>
+						<Link onClick={handleLinkClick} href="/">Usługi</Link>
 					</li>
 					<li>
-						<Link href="/uslugi">Oferta</Link>
+						<Link onClick={handleLinkClick} href="/">O Nas</Link>
 					</li>
 					<li>
-						<Link href="/portfolio">Portfolio</Link>
+						<Link onClick={handleLinkClick} href="/">Kontakt</Link>
+					</li>
+					<li>
+						<BtnLink link="/kontakt"><FaShoppingCart /> Zarezerwuj wizytę</BtnLink>
 					</li>
 
-					{/* <li>
-            <Link href='/blog'>Blog</Link>
-          </li> */}
-					<li>
-						<Link
-							href="/kontakt"
-							className="p-4 px-6 bg-white text-black rounded-lg font-bold"
-						>
-							Porozmawiajmy!
-						</Link>
-					</li>
-					<li className="w-48 border-b-2 border-white my-6"></li>
+					<li className="w-48 border-b-2 border-black my-6"></li>
 					<li className="flex gap-8">
 						<Link
 							href="https://www.facebook.com/LunarisWeb?locale=pl_PL"
@@ -122,47 +119,39 @@ const Navbar = () => {
 				</ul>
 			</div>
 
-			<ul className="hidden lg:flex gap-8 items-center font-[500] justify-center text-black">
+			<ul className="hidden lg:flex gap-8 items-center font-[600] text-lg justify-center text-black">
 				<li>
 					<Link
 						href="/"
-						className="hover:underline"
+						className="hover:underline active:text-primary transition-colors duration-100"
 					>
 						Strona Główna
 					</Link>
 				</li>
-				<li>
-					<Link
-						href="/omnie"
-						className="hover:underline"
-					>
-						O Mnie
-					</Link>
-				</li>
+
 				<StaggeredDropDown />
 				<li>
 					<Link
-						href="/portfolio"
-						className="hover:underline"
+						href="/onas"
+						className="hover:underline active:text-primary transition-colors duration-100"
 					>
-						Portfolio
+						O Nas
 					</Link>
 				</li>
-				{/* <li>
-          <Link href='/blog' className='hover:underline'>Blog</Link>
-        </li> */}
-
 				<li>
 					<Link
 						href="/kontakt"
-						className="p-4 px-6 bg-black text-white rounded-lg font-bold"
+						className="hover:underline active:text-primary transition-colors duration-100"
 					>
-						Porozmawiajmy!
+						Kontakt
 					</Link>
 				</li>
 			</ul>
+			<div className="hidden lg:block">
+				<BtnLink link="/kontakt"><FaShoppingCart /> Zarezerwuj wizytę</BtnLink>
+			</div>
 
-			<div className="absolute bottom-0 left-0 bg-gradient-to-r from-transparent via-base to-transparent w-full h-[1px]"></div>
+			<div className={` ${onTop ? 'hidden' : 'absolute'} bottom-0 left-0 bg-gradient-to-r from-transparent via-neutral-400 to-transparent w-full h-[1px]`}></div>
 		</motion.nav>
 	);
 };
@@ -189,26 +178,51 @@ const StaggeredDropDown = () => {
 				initial={wrapperVariants.closed}
 				variants={wrapperVariants}
 				style={{ originY: "top", translateX: "-50%" }}
-				className="flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-[120%] left-[50%] w-60 overflow-hidden z-20"
+				className="grid grid-cols-4 gap-2 p-2 rounded-sm bg-white shadow-xl absolute top-[120%] left-[50%] z-20 w-[40rem] border-[2px] border-base"
 			>
 				<Option
 					setOpen={setOpen}
-					link="strony-internetowe"
+					link="bol"
 					Icon={MdOutlineWeb}
-					text="Strony Internetowe"
+					text="Ból"
 				/>
 				<Option
 					setOpen={setOpen}
-					link="logotypy"
-					Icon={PiPencilCircle}
-					text="Logotypy"
+					link="cierpienie"
+					Icon={MdOutlineWeb}
+					text="Cierpienie"
 				/>
 				<Option
 					setOpen={setOpen}
-					link="grafika-komputerowa"
-					Icon={FaAddressCard}
-					text="Grafika Komputerowa"
+					link="katorga"
+					Icon={MdOutlineWeb}
+					text="Katorga"
 				/>
+				<Option
+					setOpen={setOpen}
+					link="bol"
+					Icon={MdOutlineWeb}
+					text="Ból"
+				/>
+				<Option
+					setOpen={setOpen}
+					link="bol"
+					Icon={MdOutlineWeb}
+					text="Ból"
+				/>
+				<Option
+					setOpen={setOpen}
+					link="bol"
+					Icon={MdOutlineWeb}
+					text="Ból"
+				/>
+				<Option
+					setOpen={setOpen}
+					link="bol"
+					Icon={MdOutlineWeb}
+					text="Ból"
+				/>
+				
 			</motion.ul>
 		</motion.li>
 	);
@@ -232,15 +246,14 @@ const Option = ({
 		>
 			<Link
 				href={"/uslugi/" + link}
-				className="flex items-center justify-start gap-2 w-full p-2 whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-primary transition-colors cursor-pointer"
+				className="flex items-center justify-start gap-2 w-full p-2 rounded-md hover:bg-indigo-100 text-slate-700 hover:text-primary transition-colors cursor-pointer"
 			>
 				<motion.p
 					variants={actionIconVariants}
-					className="text-xl"
 				>
 					<Icon />
 				</motion.p>
-				<p>{text}</p>
+				<p className="text-sm">{text}</p>
 			</Link>
 		</motion.li>
 	);
