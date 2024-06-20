@@ -1,12 +1,30 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { PricingTabs } from './PricingTabs'
 import PricingAcordion from './PricingAcordion';
 import IconDevider from '../reusable/IconDevider';
 import { FaCoins } from 'react-icons/fa';
+import { EveryService } from './Data';
+
+function findServiceById(id: any, array: any) {
+  const currentPage = array.find((item: any) => item.id === id);
+
+  if (!currentPage) {
+    return false
+  }
+
+  return currentPage
+}
 
 const Pricing = () => {
   const [selectedTab, setSelectedTab] = useState<number>(1);
+  const [servicesData, setServicesData] = useState(EveryService[selectedTab+1])
+
+  useEffect(() => {
+    const data = findServiceById(selectedTab, EveryService)
+    setServicesData(data)
+    console.log(servicesData)
+  }, [selectedTab])
 
   return (
     <section className="flex flex-col items-center justify-center gap-12 my-20 p-4">
@@ -19,7 +37,7 @@ const Pricing = () => {
       <PricingTabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       
       <PricingAcordion 
-        id={1}
+        solutions={servicesData.items}
       />
     </section>
   )

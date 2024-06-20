@@ -3,16 +3,17 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 
-const PricingAcordion = ({id}: {id:number}) => {
+const PricingAcordion = ({solutions}: {solutions:any}) => {
   const [open, setOpen] = useState(solutions[0].id);
-  const title = solutions.find((s) => s.id === open)?.title;
+  const title = solutions.find((s: any) => s.id === open)?.title;
   return (
     <motion.section initial={{ opacity: 0 }}
+    layout
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }} className=" bg-white w-full">
-      <div className="w-full  mx-auto flex flex-col lg:flex-row gap-8 items-start justify-center">
-          <div className="flex flex-col flex-wrap gap-4 w-fit lg:max-h-[45rem]">
-            {solutions.map((q) => {
+      <div className="w-full  mx-auto flex flex-col lg:flex-row gap-8 items-start justify-center max-w-7xl">
+          <div className="flex flex-col flex-wrap gap-4 w-full lg:max-h-[45rem] max-w-xl">
+            {solutions.map((q: any) => {
               return (
                 <Solution {...q} key={q.id} open={open} setOpen={setOpen} index={q.id} />
               );
@@ -25,7 +26,7 @@ const PricingAcordion = ({id}: {id:number}) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             key={title}
-            className="bg-primary rounded-2xl w-full h-fit p-4 max-w-4xl"
+            className="bg-primary rounded-2xl w-full h-fit p-4 "
 
           >
             Content
@@ -64,7 +65,7 @@ const Solution = ({
             animate={{
               color: isOpen ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 1)",
             }}
-            className="text-xl font-medium w-fit bg-gradient-to-r from-violet-400 to-primary bg-clip-text"
+            className="text-xl font-medium w-fit max-w-52 bg-gradient-to-r from-violet-400 to-primary bg-clip-text"
           >
             {title}
           </motion.p>
@@ -101,7 +102,7 @@ const solutions = [
   },
   {
     id: 4,
-    title: "sadgfsadfasdfasdfasdfasdfas",
+    title: "sadgfsad fasdfasdfasdf asdfas",
   },
   {
     id: 5,

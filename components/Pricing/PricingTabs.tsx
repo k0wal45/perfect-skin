@@ -1,5 +1,4 @@
-'use client'
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 interface PricingTabsProps {
   selectedTab: number;
@@ -44,7 +43,7 @@ const ToggleButton = ({
     >
       <button
         onClick={() => setSelected(id)}
-        className={`w-full origin-top-left rounded-lg border py-3 text-xs font-medium transition-all md:text-base ${
+        className={`w-full origin-top-left rounded-lg border py-3 text-xs font-medium transition-all md:text-base h-full ${
           selected === id
             ? "-translate-y-1 border-primary bg-white text-primary"
             : "border-secondary bg-white text-secondary hover:-rotate-2"

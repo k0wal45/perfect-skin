@@ -48,7 +48,7 @@ const Navbar = () => {
 			}}
 			animate={hidden ? "hidden" : "visible"}
 			transition={{ duration: 0.35, ease: "easeInOut" }}
-			className={` ${onTop ? 'bg-transparent' : 'bg-white'} fixed top-0 left-0  w-full px-4 z-4 flex justify-between items-center lg:px-20 z-40 transition-all duration-700`}
+			className={` ${onTop ? 'bg-transparent' : 'bg-white'} fixed top-0 left-0  w-full px-4 z-4 flex justify-between items-center xl:px-20 z-40 transition-all duration-700`}
 		>
 			<Link
 				href="/"
