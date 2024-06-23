@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
+import { EveryService } from "./Data";
 
 interface PricingTabsProps {
   selectedTab: number;
@@ -9,7 +10,7 @@ export const PricingTabs = ({ selectedTab, setSelectedTab }: PricingTabsProps) =
   return (
     <div className="w-full">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 lg:grid-cols-6">
-        {TAB_DATA.map((t) => (
+        {EveryService.map((t) => (
           <ToggleButton
             key={t.id}
             id={t.id}
@@ -55,29 +56,4 @@ const ToggleButton = ({
   );
 };
 
-const TAB_DATA = [
-  {
-    id: 1,
-    title: "Kosmetyka",
-  },
-  {
-    id: 2,
-    title: "Zabiegi na ciało",
-  },
-  {
-    id: 3,
-    title: "Medycyna estetyczna",
-  },
-  {
-    id: 4,
-    title: "Depilacja laserowa",
-  },
-  {
-    id: 5,
-    title: "Podologia",
-  },
-  {
-    id: 6,
-    title: "Laser pikoseundowy",
-  },
-];
+

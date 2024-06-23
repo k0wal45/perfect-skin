@@ -23,7 +23,6 @@ const Pricing = () => {
   useEffect(() => {
     const data = findServiceById(selectedTab, EveryService)
     setServicesData(data)
-    console.log(servicesData)
   }, [selectedTab])
 
   return (

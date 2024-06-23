@@ -157,42 +157,6 @@ const LaserPikosekundowy = {
       id: 5,
       title: "Odmładzanie Skóry",
     },
-    {
-      id: 6,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 7,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 8,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 9,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 10,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 11,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 12,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 13,
-      title: "Odmładzanie Skóry",
-    },
-    {
-      id: 14,
-      title: "Odmładzanie Skóry",
-    },
   ],
 };
 

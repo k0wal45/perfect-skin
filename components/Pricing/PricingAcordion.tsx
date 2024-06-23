@@ -2,10 +2,16 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+import BtnLink from "../reusable/BtnLink";
+import Image from "next/image";
+import CreateLink from "@/functions/CreateLink";
 
 const PricingAcordion = ({solutions}: {solutions:any}) => {
   const [open, setOpen] = useState(solutions[0].id);
-  const title = solutions.find((s: any) => s.id === open)?.title;
+  const solution = solutions.find((s: any) => s.id === open);
+
+  const link = CreateLink(solution.title)
+  console.log(link)
   return (
     <motion.section initial={{ opacity: 0 }}
     layout
@@ -25,11 +31,16 @@ const PricingAcordion = ({solutions}: {solutions:any}) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            key={title}
-            className="bg-primary rounded-2xl w-full h-fit p-4 "
-
+            key={solution.title}
+            className="rounded-2xl w-full h-fit p-4 flex flex-col lg:flex-row gap-4"
           >
-            Content
+            <div className="flex flex-col gap-4">
+              <h6 className="text-2xl font-bold">{solution.title}</h6>
+              <p className="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima perferendis, perspiciatis in quas consequuntur eligendi rem cum, atque omnis vero porro deleniti fuga ipsa voluptate laudantium, maiores non quam alias?</p>
+              <p className="text-2xl font-bold text-primary whitespace-nowrap flex gap-4">Przybliżony koszt: <p className="text-black">300zł</p></p>
+              <BtnLink link={'/uslugi/' + link} >Dowiedz się więcej o zabiegu</BtnLink>
+            </div>
+            <Image width={500} height={300} alt={solution.title} src='/img/masaz.jpg' className="object-cover lg:max-w-[40%] rounded-lg " />
           </motion.div>
 
       </div>
