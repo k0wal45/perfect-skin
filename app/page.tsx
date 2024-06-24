@@ -1,4 +1,6 @@
 import CallToBook from "@/components/CallToBook";
+import Contact from "@/components/Contact/Contact";
+import Experts from "@/components/Experts/Experts";
 import Hero from "@/components/Hero/Hero";
 import Introduction from "@/components/Introduction/Introduction";
 import Pricing from "@/components/Pricing/Pricing";
@@ -14,7 +16,9 @@ export default function Home() {
     <Stats />
     <Pricing />
     <CallToBook />
+    <Experts />
     <Testimonials />
+    <Contact />
 
   </main>;
 }

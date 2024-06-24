@@ -49,9 +49,9 @@ const Services = () => {
         Usługi w
         <p className="text-primary ">naszym salonie</p>
       </h3>
-      <p className="text-lg max-w-4xl text-neutral-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolorum iste reprehenderit corrupti vel nemo repellendus nulla dignissimos exercitationem mollitia molestias est et amet fuga perspiciatis ex laborum, earum pariatur ratione blanditiis sint fugit vitae unde! Ducimus voluptates explicabo suscipit ut ex fuga, quia animi repellat enim earum, harum dolore!</p>
 
       <IconDevider icon={<GiCottonFlower />} />
+      <p className="text-lg max-w-4xl text-neutral-700 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolorum iste reprehenderit corrupti vel nemo repellendus nulla dignissimos exercitationem mollitia molestias est et amet fuga perspiciatis ex laborum, earum pariatur ratione blanditiis sint fugit vitae unde! Ducimus voluptates explicabo suscipit ut ex fuga, quia animi repellat enim earum, harum dolore!</p>
       <div className="flex flex-wrap items-center justify-center gap-12">
 
       {
