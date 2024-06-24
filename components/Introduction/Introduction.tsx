@@ -55,7 +55,7 @@ const Introduction = () => {
           Zadzwoń Teraz
         </Link>
         <Link
-          href="/cennik"
+          href="/uslugi"
           className="rounded-sm bg-secondary p-4 px-6 font-semibold text-white transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:shadow-none lg:text-xl"
         >
           Sprawdź Ofertę

@@ -12,9 +12,9 @@ const Contact = () => {
         <p className="text-primary ">już teraz</p>
       </h3>
       <IconDevider icon={<MdMessage />} />
-      <p className="text-lg max-w-4xl text-neutral-700 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolorum iste reprehenderit corrupti vel nemo repellendus nulla dignissimos exercitationem mollitia molestias est et amet </p>
+      <p className="text-lg max-w-4xl text-neutral-700 text-center">Masz jakieś pytania lub nie znalazłeś jakiś potrzebnych ci informacji? Napisz do nas przez formularz poniżej, napisz maila lub zadzwoń</p>
 
-      <div className="flex flex-col lg:flex-row p-4">
+      <div className="flex flex-col-reverse lg:flex-row p-4">
         <Description />
         <Form />
       </div>

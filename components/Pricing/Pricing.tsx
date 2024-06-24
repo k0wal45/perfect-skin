@@ -4,7 +4,7 @@ import { PricingTabs } from './PricingTabs'
 import PricingAcordion from './PricingAcordion';
 import IconDevider from '../reusable/IconDevider';
 import { FaCoins } from 'react-icons/fa';
-import { EveryService } from './Data';
+import { EveryService } from '../Data';
 
 function findServiceById(id: any, array: any) {
   const currentPage = array.find((item: any) => item.id === id);
@@ -18,7 +18,7 @@ function findServiceById(id: any, array: any) {
 
 const Pricing = () => {
   const [selectedTab, setSelectedTab] = useState<number>(1);
-  const [servicesData, setServicesData] = useState(EveryService[selectedTab+1])
+  const [servicesData, setServicesData] = useState(EveryService[selectedTab])
 
   useEffect(() => {
     const data = findServiceById(selectedTab, EveryService)
@@ -43,7 +43,4 @@ const Pricing = () => {
 }
 
 export default Pricing
-
-
-// {selectedTab === 1 && <div>Issues Content</div>}
 

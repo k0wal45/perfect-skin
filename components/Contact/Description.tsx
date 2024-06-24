@@ -5,10 +5,10 @@ import { GiRotaryPhone } from 'react-icons/gi'
 
 const Description = () => {
   return (
-    <div className={classes.bgSquares + ' flex flex-col gap-8 p-8 items-start jutify-center text-white'}>
+    <div className={classes.bgSquares + ' flex flex-col gap-8 p-8 items-start justify-around text-white'}>
       {/* item */}
       <div className="flex gap-4">
-        <p className="text-8xl">
+        <p className="text-7xl">
           <FaMapLocationDot />
         </p>
           <div className="flex flex-col items-start justify-center text-lg">
@@ -19,7 +19,7 @@ const Description = () => {
       </div>
       {/* item */}
       <div className="flex gap-4">
-        <p className="text-8xl">
+        <p className="text-7xl">
           <GiRotaryPhone />
         </p>
           <div className="flex flex-col items-start justify-center text-lg">
@@ -30,7 +30,7 @@ const Description = () => {
       </div>
       {/* item */}
       <div className="flex gap-4">
-        <p className="text-8xl">
+        <p className="text-7xl">
           <BsEnvelopeAt />
 
         </p>

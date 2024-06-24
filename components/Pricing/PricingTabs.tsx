@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { EveryService } from "./Data";
+import { EveryService } from "../Data";
 
 interface PricingTabsProps {
   selectedTab: number;
@@ -7,6 +7,7 @@ interface PricingTabsProps {
 }
 
 export const PricingTabs = ({ selectedTab, setSelectedTab }: PricingTabsProps) => {
+
   return (
     <div className="w-full">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 lg:grid-cols-6">

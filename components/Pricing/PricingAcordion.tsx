@@ -1,18 +1,23 @@
 'use client'
 import { Dispatch, SetStateAction, useState } from "react";
-import { FiArrowRight } from "react-icons/fi";
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import BtnLink from "../reusable/BtnLink";
 import Image from "next/image";
 import CreateLink from "@/functions/CreateLink";
 
+interface Solution {
+  id: number,
+  title: string,
+  description: string,
+  summary: string,
+  imgSrc: string,
+}
+
 const PricingAcordion = ({solutions}: {solutions:any}) => {
   const [open, setOpen] = useState(solutions[0].id);
-  const solution = solutions.find((s: any) => s.id === open);
+  const solution: Solution = solutions.find((s: any) => s.id === open);
 
-  const link = CreateLink(solution.title)
-  console.log(link)
-  return (
+  return  (
     <motion.section initial={{ opacity: 0 }}
     layout
     animate={{ opacity: 1 }}
@@ -36,16 +41,16 @@ const PricingAcordion = ({solutions}: {solutions:any}) => {
           >
             <div className="flex flex-col gap-4">
               <h6 className="text-2xl font-bold">{solution.title}</h6>
-              <p className="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima perferendis, perspiciatis in quas consequuntur eligendi rem cum, atque omnis vero porro deleniti fuga ipsa voluptate laudantium, maiores non quam alias?</p>
-              <p className="text-2xl font-bold text-primary whitespace-nowrap flex gap-4">Przybliżony koszt: <p className="text-black">300zł</p></p>
-              <BtnLink link={'/uslugi/' + link} >Dowiedz się więcej o zabiegu</BtnLink>
+              <p className="text-lg">{solution.description}</p>
+              <p className="text-xl font-bold text-primary whitespace-nowrap flex gap-4">Przybliżony koszt: <p className="text-black">300zł</p></p>
+              <BtnLink link={'/uslugi/' + CreateLink(solution.title)} >Dowiedz się więcej o zabiegu</BtnLink>
             </div>
-            <Image width={500} height={300} alt={solution.title} src='/img/masaz.jpg' className="object-cover lg:max-w-[40%] rounded-lg " />
+            <Image width={500} height={300} alt={solution.title} src={'/img/' + solution.imgSrc} className="object-cover lg:max-w-[40%] rounded-lg " />
           </motion.div>
-
+            
       </div>
     </motion.section>
-  );
+  ) 
 };
 
 const Solution = ({

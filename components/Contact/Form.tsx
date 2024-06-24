@@ -41,7 +41,7 @@ const Form = () => {
 
     if (e.target.validate.checked) {
       console.log('validate')
-      toast.error('Cos poszło nie tak, Skontaktuj się mailowo: lunarisweb.pl@gmail.com', {
+      toast.error('Cos poszło nie tak, Skontaktuj się mailowo', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -145,7 +145,7 @@ const Form = () => {
       
       // Sprawdzanie pola "message"
       if (message.trim() === "") {
-        toast.error('Cos poszło nie tak, Skontaktuj się mailowo: lunarisweb.pl@gmail.com', {
+        toast.error('Cos poszło nie tak, Skontaktuj się mailowo', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -219,7 +219,7 @@ const Form = () => {
         required
       /> 
   
-
+      
       <input 
         placeholder='Email'
         type="email" name='email' 
