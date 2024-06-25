@@ -86,19 +86,19 @@ const Navbar = () => {
 			>
 				<ul className="flex flex-col justify-center items-end gap-8 text-xl font-bold text-black p-8">
 					<li>
-						<Link onClick={handleLinkClick} href="/">Strona Główna</Link>
+						<Link className="z-20" onClick={handleLinkClick} href="/">Strona Główna</Link>
 					</li>
 					<li>
-						<Link onClick={handleLinkClick} href="/">Usługi</Link>
+						<Link className="z-20" onClick={handleLinkClick} href="/uslugi">Usługi</Link>
 					</li>
 					<li>
-						<Link onClick={handleLinkClick} href="/">O Nas</Link>
+						<Link className="z-20" onClick={handleLinkClick} href="/onas">O Nas</Link>
 					</li>
 					<li>
-						<Link onClick={handleLinkClick} href="/">Kontakt</Link>
+						<Link className="z-20" onClick={handleLinkClick} href="/kontakt">Kontakt</Link>
 					</li>
 					<li>
-						<BtnLink link="/kontakt"><FaShoppingCart /> Zarezerwuj wizytę</BtnLink>
+						<BtnLink link="https://booksy.com/pl-pl/101806_perfect-skin-centrum-kosmetologii_inni_12311_chorzow#ba_s=seo"><FaShoppingCart /> Zarezerwuj wizytę</BtnLink>
 					</li>
 
 					<li className="w-48 border-b-2 border-black my-6"></li>
