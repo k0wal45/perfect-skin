@@ -80,7 +80,7 @@ const Navbar = () => {
 			</label>
 
 			<div
-				className={`fixed top-0 right-0 h-screen w-fit bg-white pt-32 border-l-2 border-black transition-all duration-1000 origin-right ease-in-out z-40
+				className={`fixed top-0 right-0 h-screen w-fit bg-white flex flex-col items-center justify-center border-l-2 border-black transition-all duration-1000 origin-right ease-in-out z-40
         ${visible ? "scale-x-1" : "scale-x-0"}
       `}
 			>
