@@ -9,7 +9,7 @@ const ServiceCard = ({image, cost, title, text, link}: {image: string, cost: str
           {cost}
         </div>
         <div className="absolute size-[21rem] bg-white rounded-full translate-x-[-4px] translate-y-[-4px] z-10 group-hover:translate-y-[4px] group-hover:translate-x-[4px] transition-transform duration-300 "></div>
-        <Image src={'/img/' + image} alt='' width={300} height={300} className='size-[20rem] z-20 rounded-full object-cover'/>
+        <Image src={'/img/' + image} alt='' width={400} height={400} className='size-[20rem] z-20 rounded-full object-cover'/>
         <div className="absolute top-4 left-4 z-30 w-[20rem] h-[20rem] rounded-full bg-primary/70 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white grid place-items-center " >
           <p className="text-lg">{text}</p>
         </div>
