@@ -20,7 +20,7 @@ export const serviceType = {
       name: 'excerpt',
       title: 'Krótki Opis',
       type: 'text',
-      validation: (rule: any) => rule.max(200).warning('Maksymalnie 200 znaków. Opis ma być krótki :)')
+      validation: (rule: any) => rule.max(400).warning('Maksymalnie 400 znaków. Opis ma być krótki :)')
     },
     {
       name: 'description',
@@ -29,8 +29,8 @@ export const serviceType = {
     },
     {
       name: 'cost',
-      title: 'Długi Opis',
-      type: 'text',
+      title: 'Koszt Zabiegu (mogą być widełki np. 300 - 500)',
+      type: 'string',
     },
     {
       name: 'galery',

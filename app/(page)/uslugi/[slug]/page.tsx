@@ -4,10 +4,26 @@ import Experts from '@/components/Experts/Experts'
 import Map from '@/components/Map'
 import Pricing from '@/components/Pricing/Pricing'
 import { AboutService } from '@/components/Services/ServicePage/AboutService'
+import { client } from '@/sanity/lib/client'
 import Image from 'next/image'
 import React from 'react'
 
-const page = () => {
+const getPost = async (slug:string) => {
+  const EVENTS_QUERY = `*[_type == "zabieg"] {
+    name,
+    excerpt,
+    cost,
+    _id,
+    description,
+    typeOfService,
+    galery,
+    }`
+  ;
+    const event = await client.fetch(EVENTS_QUERY);
+    return event
+}
+
+const page = async () => {
   return (
     <main className="max-w-screen">
       <section className="relative w-full py-32 flex items-center justify-start overflow-hidden bg-primary/60">
