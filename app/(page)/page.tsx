@@ -4,6 +4,7 @@ import Experts from "@/components/Experts/Experts";
 import Galery from "@/components/Galery/Galery";
 import Hero from "@/components/Hero/Hero";
 import Introduction from "@/components/Introduction/Introduction";
+import Map from "@/components/Map";
 import Pricing from "@/components/Pricing/Pricing";
 import Services from "@/components/Services/Services";
 import Stats from "@/components/Stats";
@@ -19,6 +20,7 @@ export default function Home() {
     <CallToBook />
     <Experts />
     <Testimonials />
+    <Map />
     <Contact />
     <Galery />
 

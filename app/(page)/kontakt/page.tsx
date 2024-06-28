@@ -4,6 +4,7 @@ import Form from '@/components/Contact/Form'
 import Experts from '@/components/Experts/Experts'
 import Galery from '@/components/Galery/Galery'
 import Introduction from '@/components/Introduction/Introduction'
+import Map from '@/components/Map'
 import Pricing from '@/components/Pricing/Pricing'
 import Services from '@/components/Services/Services'
 import React from 'react'
@@ -17,6 +18,7 @@ const page = () => {
           <Form />
         </div>
       </section>
+      <Map />
       <Introduction />
       <Pricing />
       <CallToBook />

@@ -1,6 +1,7 @@
 import About from '@/components/About/About'
 import Contact from '@/components/Contact/Contact'
 import Galery from '@/components/Galery/Galery'
+import Map from '@/components/Map'
 import Services from '@/components/Services/Services'
 import Stats from '@/components/Stats'
 import Image from 'next/image'
@@ -14,6 +15,7 @@ const page = () => {
         <Image width={1920} height={1080} src='/img/astetic.jpg' alt='Astetyczne Kosmetyki' className='absolute w-full object-cover object-center top-0 left-0 h-full z-[-1]' />
       </section>
       <About />
+      <Map />
       <Galery />
       <Stats />
       <Contact />

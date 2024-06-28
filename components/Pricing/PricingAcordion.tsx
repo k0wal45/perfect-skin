@@ -42,7 +42,7 @@ const PricingAcordion = ({solutions}: {solutions:any}) => {
             <div className="flex flex-col gap-4">
               <h6 className="text-2xl font-bold">{solution.title}</h6>
               <p className="text-lg">{solution.description}</p>
-              <p className="text-xl font-bold text-primary whitespace-nowrap flex gap-4">Przybliżony koszt: <p className="text-black">300zł</p></p>
+              <p className="text-xl font-bold text-primary whitespace-nowrap flex gap-4">Przybliżony koszt: <span className="text-black">300zł</span></p>
               <BtnLink link={'/uslugi/' + CreateLink(solution.title)} >Dowiedz się więcej o zabiegu</BtnLink>
             </div>
             <Image width={500} height={300} alt={solution.title} src={'/img/' + solution.imgSrc} className="object-cover lg:max-w-[40%] rounded-lg " />

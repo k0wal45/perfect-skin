@@ -5,33 +5,35 @@ export const serviceType = {
   type: 'document',
   fields: [
     {
-      name: 'nazwa',
+      name: 'name',
       title: 'Nazwa',
       type: 'string',
 
     },
     {
-      name: 'slug',
-      type: 'slug',
-      options: {source: 'name'},
-
-    },
-    {
-      name: 'klasa',
+      name: 'typeOfService',
+      title: 'Klasa',
       type: 'reference',
       to: [{type: 'klasa'}],
     },
     {
-      name: 'krotkiOpis',
+      name: 'excerpt',
+      title: 'Krótki Opis',
       type: 'text',
       validation: (rule: any) => rule.max(200).warning('Maksymalnie 200 znaków. Opis ma być krótki :)')
     },
     {
-      name: 'dlugiOpis',
+      name: 'description',
+      title: 'Długi Opis',
       type: 'text',
     },
     {
-      name: 'galeriaZdjec',
+      name: 'cost',
+      title: 'Długi Opis',
+      type: 'text',
+    },
+    {
+      name: 'galery',
       title: 'Galeria Zdjęć',
       type: 'array',
       of: [{ type: 'image' }]
