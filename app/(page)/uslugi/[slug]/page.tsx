@@ -9,7 +9,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const getPost = async (slug:string) => {
-  const EVENTS_QUERY = `*[_type == "zabieg"] {
+  const EVENTS_QUERY = `*[_type == "zabieg"] [0] {
     name,
     excerpt,
     cost,
@@ -23,19 +23,36 @@ const getPost = async (slug:string) => {
     return event
 }
 
-const page = async () => {
+
+export async function generateMetadata({ params }: any) {
+
+  const service: any = await getPost(params?.slug)
+
+  return {
+    title: service.name,
+    description: service.excerpt,
+  }
+  
+}
+
+
+const page = async ({params}: any) => {
+
+  const service: any = await getPost(params?.slug)
+
   return (
-    <main className="max-w-screen">
-      <section className="relative w-full py-32 flex items-center justify-start overflow-hidden bg-primary/60">
-        <h1 className="w-full lg:w-1/2 grid place-items-center font-bold text-6xl text-white">O Nas</h1>
-        <Image width={1920} height={1080} src='/img/astetic.jpg' alt='Astetyczne Kosmetyki' className='absolute w-full object-cover object-center top-0 left-0 h-full z-[-1]' />
-      </section>
-      <AboutService />
-      <Pricing />
-      <CallToBook />
-      <Experts />
-      <Map />
-      <Contact />
+    <main className='mt-24 lg:mt-0'>
+
+        <AboutService 
+          data={service}
+        />
+      <div className="overflow-x-hidden">
+        <Pricing />
+        <CallToBook />
+        <Experts />
+        <Map />
+        <Contact /> 
+      </div>
     </main>
   )
 }

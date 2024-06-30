@@ -1,8 +1,10 @@
 'use client'
+import { urlForImage } from "@/sanity/lib/image";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
-export const Carousel = () => {
+export const Carousel = ({data}: any) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -10,30 +12,22 @@ export const Carousel = () => {
   });
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full max-w-screen overflow-x-hidden">
       <Gradient />
 
       <div ref={ref} className="relative z-0 flex flex-col gap-6 md:gap-12">
-        <CarouselItem
-          scrollYProgress={scrollYProgress}
-          position={1}
-          numItems={4}
-        />
-        <CarouselItem
-          scrollYProgress={scrollYProgress}
-          position={2}
-          numItems={4}
-        />
-        <CarouselItem
-          scrollYProgress={scrollYProgress}
-          position={3}
-          numItems={4}
-        />
-        <CarouselItem
-          scrollYProgress={scrollYProgress}
-          position={4}
-          numItems={4}
-        />
+        {
+          data.galery.map((item: any, index: number) => (
+            <CarouselItem
+              scrollYProgress={scrollYProgress}
+              position={index+1}
+              numItems={data.galery.length}
+              item={item}
+              title={data.name}
+              key={index}
+            />
+          ))
+        }
       </div>
 
     </div>
@@ -44,10 +38,14 @@ const CarouselItem = ({
   scrollYProgress,
   position,
   numItems,
+  item,
+  title
 }: {
   scrollYProgress: MotionValue<number>;
   position: number;
   numItems: number;
+  item: any;
+  title: string;
 }) => {
   const stepSize = 1 / numItems;
   const end = stepSize * position;
@@ -62,9 +60,9 @@ const CarouselItem = ({
         opacity,
         scale,
       }}
-      className="grid aspect-video w-full shrink-0 place-content-center rounded-2xl bg-neutral-900"
+      className="w-full rounded-2xl bg-neutral-900 overflow-hidden"
     >
-      <span className="text-lg text-neutral-600">Feature demo here</span>
+      <Image width={800} height={700} alt={title} src={urlForImage(item).url()} className="w-full h-full object-fit" />
     </motion.div>
   );
 };

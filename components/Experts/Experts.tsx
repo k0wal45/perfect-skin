@@ -20,7 +20,7 @@ const Experts = () => {
             <Image src='/img/masaz.jpg' alt='' width={300} height={300} className='size-[23rem] z-20 rounded-full object-cover'/>
           </div>
           <h4 className="font-[600] text-2xl text-secondary">Małgorzata Budzalewicz</h4>
-          <p className="font-medium text-xl text-neutral-500">Współwłaścicielka, Podolog, Kosmetolog</p>
+          <p className="font-medium text-xl text-neutral-500">Współwłaścicielka, Kosmetolog, Podolog</p>
           <p className="font-medium text-xl text-neutral-500">+48 790 216 665</p>
           
         </div>
@@ -30,9 +30,9 @@ const Experts = () => {
             <div className="absolute size-[24rem] bg-white rounded-full translate-x-[-4px] translate-y-[-4px] z-10 group-hover:translate-y-[4px] group-hover:translate-x-[4px] transition-transform duration-300 "></div>
             <Image src='/img/masaz.jpg' alt='' width={300} height={300} className='size-[23rem] z-20 rounded-full object-cover'/>
           </div>
-          <h4 className="font-[600] text-2xl text-secondary">Małgorzata Budzalewicz</h4>
-          <p className="font-medium text-xl text-neutral-500">Współwłaścicielka, Podolog</p>
-          <p className="font-medium text-xl text-neutral-500">+48 790 216 665</p>
+          <h4 className="font-[600] text-2xl text-secondary">Monika Warszewska</h4>
+          <p className="font-medium text-xl text-neutral-500">Współwłaścicielka, Kosmetolog, Linergistka</p>
+          <p className="font-medium text-xl text-neutral-500">+48 500 033 031</p>
           
         </div>
       

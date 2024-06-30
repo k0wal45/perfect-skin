@@ -8,7 +8,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <main className="overflow-x-hidden max-w-screen">
+    <main className="overflow-x-hidden">
       <section className={`${noto.className} flex flex-col items-center justify-center gap-12 py-32 pt-48 relative text-lg lg:text-xl p-4`}>
         <h1 className='text-5xl lg:text-6xl bg-clip-text'>Nasze Usługi</h1>
         <p className='max-w-lg text-center tracking-widest leading-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deleniti quis molestias recusandae facilis nesciunt saepe quidem debitis at reiciendis!</p>

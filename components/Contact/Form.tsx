@@ -157,12 +157,15 @@ const Form = () => {
           });
           return ;
       }
+      
 
-    emailjs.sendForm('service_r8dmshk', 'template_pojq8ao', form.current, process.env.NEXT_PUBLIC_EMAIL_JS)
+    emailjs.sendForm( 'service_k46ng0o' , 'template_1uzmigk', form.current, {
+        publicKey: process.env.NEXT_PUBLIC_EMAIL_JS,
+      })
       .then((result) => {
           console.log(result.text);
       }, (error) => {
-        toast.error('Cos poszło nie tak, Skontaktuj się mailowo: lunarisweb.pl@gmail.com', {
+        toast.error('Cos poszło nie tak, Skontaktuj się mailowo', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,

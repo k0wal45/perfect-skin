@@ -5,7 +5,8 @@ export const typeOfService = {
   type: 'document',
   fields: [
     {
-      name: 'nazwa',
+      name: 'name',
+      title: 'Nazwa',
       type: 'string',
     },
   ],

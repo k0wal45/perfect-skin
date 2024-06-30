@@ -11,8 +11,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <main className="overflow-x-hidden max-w-screen my-24">
-      <section className="flex flex-col items-center justify-center gap-12 p-4">
+    <main className="overflow-x-hidden">
+      <section className="flex flex-col items-center justify-center gap-12 p-4 mt-24">
         <div className="flex flex-col-reverse lg:flex-row p-4 mx-auto,">
           <Description />
           <Form />
