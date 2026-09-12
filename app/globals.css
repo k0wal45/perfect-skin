@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #111111;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Primary scale — green accent #1FFFAD */
+  --color-primary-50: #ecfdf6;
+  --color-primary-100: #d1fae5;
+  --color-primary-200: #a7f3d0;
+  --color-primary-300: #6ee7b7;
+  --color-primary-400: #34d399;
+  --color-primary: #3ee094;
+  --color-primary-600: #15cc8a;
+  --color-primary-700: #0f9968;
+  --color-primary-800: #0a6645;
+  --color-primary-900: #053323;
+
+  /* Secondary — dark grays */
+  --color-secondary: #6b7280;
+  --color-secondary-light: #9ca3af;
+  --color-secondary-dark: #4b5563;
+
+  /* Tertiary — light grays with subtle green tint */
+  --color-tertiary: #d1d5db;
+  --color-tertiary-light: #e5e7eb;
+  --color-tertiary-dark: #9ca3af;
+
+  /* Neutral scale — pure grays */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  /* Surface — white/light gray */
+  --color-surface: #f5f5f5;
+  --color-surface-muted: #efefef;
+  --color-surface-dim: #e5e5e5;
+  --color-surface-bright: #ffffff;
+  --color-surface-container: #f0f0f0;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container-high: #eaeaea;
+  --color-surface-lowest: #ffffff;
+
+  /* Extended palette */
+  --color-secondary-container: #e5e7eb;
+  --color-secondary-fixed: #f3f4f6;
+  --color-primary-fixed: #d1fae5;
+
+  /* Fonts */
+  --font-sans: var(--font-plus-jakarta), sans-serif;
+  --font-serif: var(--font-playfair), serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
