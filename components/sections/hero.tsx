@@ -19,7 +19,7 @@ export function Hero() {
             </div>
 
             <Typography variant="h1" className="text-[28px] leading-[36px] lg:text-[56px] lg:leading-[64px] tracking-tight">
-              Salon Kosmetyczny Chorzów.
+              Strona w budowie, dane są nieprawidłowe i wygenerowane.
               <br />
               <span className="italic text-neutral-900 text-3xl lg:text-[56px]">Perfect Skin</span>
             </Typography>
