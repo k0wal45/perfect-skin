@@ -9,24 +9,11 @@ import { getAllOferty } from "@/lib/oferty";
 export function Treatments() {
   const all = getAllOferty();
 
-  // Find 4 distinct categories for variety
-  const selectedOferty: import("@/lib/oferty").Oferta[] = [];
-  const seenCategories = new Set<string>();
-
-  for (const item of all) {
-    if (!seenCategories.has(item.kategoria)) {
-      seenCategories.add(item.kategoria);
-      selectedOferty.push(item);
-    }
-    if (selectedOferty.length === 4) break;
-  }
-
-  // Fallback to first 4 if we somehow don't have 4 categories
-  while (selectedOferty.length < 4 && selectedOferty.length < all.length) {
-    const nextItem = all.find((i) => !selectedOferty.includes(i));
-    if (nextItem) selectedOferty.push(nextItem);
-    else break;
-  }
+  // Hand-picked treatments for the homepage
+  const featuredIds = ["6290601", "2304794", "6644176", "1425772"];
+  const selectedOferty = featuredIds
+    .map((id) => all.find((o) => o.id_uslugi === id))
+    .filter((o): o is import("@/lib/oferty").Oferta => !!o);
 
   return (
     <section className="py-12 lg:py-24">
@@ -73,7 +60,7 @@ export function Treatments() {
 
                 <Typography
                   variant="h3"
-                  className="text-[20px] leading-6.5 mb-3 line-clamp-2"
+                  className="text-[20px] leading-6.5 mb-3 line-clamp-3"
                 >
                   <Link
                     href={`/oferta/${t.slug}`}
