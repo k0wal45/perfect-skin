@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import "./globals.css";
+import Head from "next/head";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Perfect Skin – Salon Kosmetyczny Chorzów | Kosmetologia, Depilacja Laserowa, Podologia",
+      "Perfect Skin Centrum Kosmetologii Chorzów | Kosmetologia, Depilacja Laserowa, Podologia",
     template: "%s | Perfect Skin Chorzów",
   },
   description:
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title:
-      "Perfect Skin – Salon Kosmetyczny Chorzów | Kosmetologia i Depilacja Laserowa",
+      "Perfect Skin Centrum Kosmetologii Chorzów | Kosmetologia i Depilacja Laserowa",
     description:
       "Profesjonalny salon kosmetyczny w Chorzowie. Depilacja laserowa, peelingi, makijaż permanentny, podologia. Rezerwacja online Booksy.",
   },
@@ -65,9 +66,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pl"
       className={`${playfair.variable} ${plusJakarta.variable} h-full antialiased`}
     >
+      <Head>
+        <meta
+          name="apple-mobile-web-app-title"
+          content="Perfect Skin Centrum Kosmetologii"
+        />
+      </Head>
       <body className="min-h-full flex flex-col bg-surface-bright text-neutral-900 font-sans">
         <Header />
-        <main className="w-full pt-[116px] flex-1">{children}</main>
+        <main className="w-full pt-29 flex-1">{children}</main>
         <Footer />
       </body>
       {gaId && <GoogleAnalytics gaId={gaId} />}
