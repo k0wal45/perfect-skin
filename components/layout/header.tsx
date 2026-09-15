@@ -27,7 +27,9 @@ export function Header() {
           <div className="flex items-center gap-7">
             <span className="inline-flex items-center gap-1">
               <Phone className="h-3.5 w-3.5 text-neutral-500" />
-              <span className="tracking-wider">+48 500 033 031</span>
+              <span className="tracking-wider">
+                +48 790 216 665 | +48 500 033 031
+              </span>
             </span>
             <span className="hidden sm:inline-flex items-center gap-1">
               <MapPin className="h-3.5 w-3.5 text-neutral-500" />
@@ -35,7 +37,7 @@ export function Header() {
             </span>
           </div>
           <span className="hidden md:inline text-neutral-500">
-            Pn - Pt: 9:00 - 20:00 | Sob: 9:00 - 15:00
+            Pn - Pt: 10:00 - 19:00 | Sob: 9:00 - 14:00
           </span>
         </div>
       </div>
@@ -78,21 +80,29 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <Button asChild size="md" className="hidden sm:inline-flex shadow-[0_6px_20px_rgba(0,0,0,0.12)]">
+            <Button
+              asChild
+              size="md"
+              className="hidden sm:inline-flex shadow-[0_6px_20px_rgba(0,0,0,0.12)]"
+            >
               <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer">
                 <CalendarDays className="h-4 w-4" />
                 Zarezerwuj wizytę
               </a>
             </Button>
-            
+
             {/* Mobile menu toggle */}
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               className="lg:hidden text-neutral-900"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -125,7 +135,12 @@ export function Header() {
             );
           })}
           <Button asChild size="lg" className="w-full mt-4 sm:hidden">
-            <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+            <a
+              href={BOOKSY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               <CalendarDays className="h-4 w-4 mr-2" />
               Zarezerwuj wizytę
             </a>

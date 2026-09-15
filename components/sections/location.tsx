@@ -8,21 +8,18 @@ const contactItems = [
     icon: <MapPin className="h-5 w-5" />,
     title: "Adres gabinetu",
     lines: ["ul. Gałeczki 30, 41-500 Chorzów"],
-    note: "Bezpłatny prywatny parking bezpośrednio przed wejściem",
+    note: "Bezpłatny parking bezpośrednio przed wejściem",
   },
   {
     icon: <Clock className="h-5 w-5" />,
     title: "Godziny otwarcia",
-    lines: [
-      "Poniedziałek – Piątek: 09:00 – 20:00",
-      "Sobota: 09:00 – 15:00",
-    ],
-    note: null,
+    lines: ["Poniedziałek - Piątek: 10:00 - 19:00", "Sobota: 09:00 - 14:00"],
+    note: "Możliwość rezerwacji innych godzin",
   },
   {
     icon: <PhoneCall className="h-5 w-5" />,
     title: "Kontakt bezpośredni",
-    lines: ["+48 500 033 031"],
+    lines: ["+48 500 033 031", "+48 790 216 665"],
     note: "Chętnie odpowiemy na wszelkie pytania przed wizytą",
   },
 ];
@@ -56,7 +53,10 @@ export function Location() {
                     {item.icon}
                   </div>
                   <div>
-                    <Typography variant="label" className="font-semibold text-neutral-900 block mb-1">
+                    <Typography
+                      variant="label"
+                      className="font-semibold text-neutral-900 block mb-1"
+                    >
                       {item.title}
                     </Typography>
                     {item.lines.map((line) => (
@@ -69,7 +69,10 @@ export function Location() {
                       </Typography>
                     ))}
                     {item.note && (
-                      <Typography variant="bodyMuted" className="text-[11px] text-neutral-500 mt-1">
+                      <Typography
+                        variant="bodyMuted"
+                        className="text-[11px] text-neutral-500 mt-1"
+                      >
                         {item.note}
                       </Typography>
                     )}

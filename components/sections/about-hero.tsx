@@ -19,27 +19,41 @@ export function AboutHero() {
           </div>
 
           <Typography variant="h1" className="mb-4 leading-[1.12]">
-            Salon Kosmetyczny Perfect Skin Chorzów<br/>
-            <span className="italic font-normal text-neutral-900 text-[28px] md:text-[40px]">Dwie specjalistki, jedna wizja piękna.</span>
+            Salon Kosmetyczny Perfect Skin Chorzów
+            <br />
+            <span className="italic font-normal text-neutral-900 text-[28px] md:text-[40px]">
+              Dwie specjalistki, jedna wizja piękna.
+            </span>
           </Typography>
 
-          <Typography variant="body" className="text-lg max-w-2xl mx-auto mb-12">
-            W Perfect Skin łączymy akademicką wiedzę kliniczną z intymną atmosferą relaksu. Wierzymy w terapie szyte na miarę, poszanowanie naturalnej fizjologii skóry oraz dialog pozbawiony pośpiechu.
+          <Typography
+            variant="body"
+            className="text-lg max-w-2xl mx-auto mb-12"
+          >
+            W Perfect Skin łączymy akademicką wiedzę kliniczną z intymną
+            atmosferą relaksu. Wierzymy w terapie szyte na miarę, poszanowanie
+            naturalnej fizjologii skóry oraz dialog pozbawiony pośpiechu.
           </Typography>
 
           {/* Quick Trust Pill Row */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-xl">
             <div className="p-4 bg-surface-lowest shadow-sm flex items-center justify-center gap-2">
               <ShieldCheck className="h-5 w-5 text-neutral-900" />
-              <span className="font-sans text-[11px] font-medium text-neutral-900">Dyplomowani Kosmetolodzy</span>
+              <span className="font-sans text-[11px] font-medium text-neutral-900">
+                Dyplomowani Kosmetolodzy
+              </span>
             </div>
             <div className="p-4 bg-surface-lowest shadow-sm flex items-center justify-center gap-2">
               <Microscope className="h-5 w-5 text-neutral-900" />
-              <span className="font-sans text-[11px] font-medium text-neutral-900">Certyfikacja Medyczna</span>
+              <span className="font-sans text-[11px] font-medium text-neutral-900">
+                Certyfikacja specjalistyczna
+              </span>
             </div>
             <div className="p-4 bg-surface-lowest shadow-sm col-span-2 sm:col-span-1 flex items-center justify-center gap-2">
               <Leaf className="h-5 w-5 text-neutral-900" />
-              <span className="font-sans text-[11px] font-medium text-neutral-900">Czyste Formuły Terapii</span>
+              <span className="font-sans text-[11px] font-medium text-neutral-900">
+                Szeroki wachlarz zabiegów
+              </span>
             </div>
           </div>
         </div>

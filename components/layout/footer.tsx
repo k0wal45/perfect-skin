@@ -3,7 +3,18 @@ import { BOOKSY_URL } from "@/lib/constants";
 import { MapPin, Phone, Clock, ChevronRight } from "lucide-react";
 
 const Instagram = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
@@ -11,14 +22,33 @@ const Instagram = ({ className }: { className?: string }) => (
 );
 
 const Facebook = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   </svg>
 );
 
 const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/perfectskin_chorzow", icon: Instagram },
-  { label: "Facebook", href: "https://www.facebook.com/PerfectSkinChorzow", icon: Facebook },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/perfectskin_chorzow",
+    icon: Instagram,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/PerfectSkinChorzow",
+    icon: Facebook,
+  },
 ];
 
 const treatmentLinks = [
@@ -48,9 +78,9 @@ export function Footer() {
               Perfect Skin
             </span>
             <p className="font-sans text-sm text-neutral-500 mt-4 mb-6 leading-relaxed">
-              Autorski gabinet kosmetologii estetycznej i pielęgnacji skóry
-              w Chorzowie. Oaza spokoju, naturalnego piękna oraz
-              profesjonalnych rytuałów terapeutycznych.
+              Autorski gabinet kosmetologii estetycznej i pielęgnacji skóry w
+              Chorzowie. Oaza spokoju, naturalnego piękna oraz profesjonalnych
+              zagiebów terapeutycznych.
             </p>
             <div className="flex items-center gap-2">
               {socialLinks.map((social) => (
@@ -131,20 +161,21 @@ export function Footer() {
                 <MapPin className="h-5 w-5 text-neutral-900 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-medium text-neutral-900">
-                    Salon Perfect Skin
+                    Perfect Skin Centrum Kosmetologii
                   </p>
                   <p>ul. Gałeczki 30, 41-500 Chorzów</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-neutral-900 shrink-0" />
+                <p className="font-medium text-neutral-900">+48 790 216 665</p>
                 <p className="font-medium text-neutral-900">+48 500 033 031</p>
               </div>
               <div className="flex items-start gap-2">
                 <Clock className="h-5 w-5 text-neutral-900 shrink-0 mt-0.5" />
                 <div>
-                  <p>Pn - Pt: 9:00 - 20:00</p>
-                  <p>Sobota: 9:00 - 15:00</p>
+                  <p>Pn - Pt: 10:00 - 19:00</p>
+                  <p>Sobota: 9:00 - 14:00</p>
                   <p>Niedziela: Zamknięte</p>
                 </div>
               </div>
@@ -154,9 +185,15 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-7 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
-          <p>© {new Date().getFullYear()} Perfect Skin Kosmetologia Chorzów. Wszelkie prawa zastrzeżone.</p>
+          <p>
+            © {new Date().getFullYear()} Perfect Skin Centrum Kosmetologii.
+            Wszelkie prawa zastrzeżone.
+          </p>
           <div className="flex items-center gap-6">
-            <Link href="/polityka-prywatnosci" className="hover:text-neutral-900 transition-colors">
+            <Link
+              href="/polityka-prywatnosci"
+              className="hover:text-neutral-900 transition-colors"
+            >
               Polityka Prywatności
             </Link>
             <span className="text-neutral-300">•</span>

@@ -3,7 +3,13 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { BOOKSY_URL } from "@/lib/constants";
-import { CalendarDays, ArrowRight, ShieldCheck, Sparkles, Star } from "lucide-react";
+import {
+  CalendarDays,
+  ArrowRight,
+  ShieldCheck,
+  Sparkles,
+  Star,
+} from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
@@ -15,29 +21,42 @@ export function Hero() {
           <div className="lg:col-span-6 flex flex-col items-start space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-neutral-100 border-l-4 border-neutral-900 text-neutral-500 text-[11px] uppercase tracking-widest font-semibold font-sans">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
-              <span>Instytut Kosmetologii • Chorzów</span>
+              <span>Centrum Kosmetologii • Chorzów</span>
             </div>
 
-            <Typography variant="h1" className="text-[28px] leading-[36px] lg:text-[56px] lg:leading-[64px] tracking-tight">
-              Strona w budowie, dane są nieprawidłowe i wygenerowane.
+            <Typography
+              variant="h1"
+              className="text-[28px] leading-9 lg:text-[56px] lg:leading-16 tracking-tight"
+            >
+              Strona w budowie, dane moga być nie prawidłowe
               <br />
-              <span className="italic text-neutral-900 text-3xl lg:text-[56px]">Perfect Skin</span>
+              <span className="italic text-neutral-900 text-3xl lg:text-[56px]">
+                Perfect Skin
+              </span>
             </Typography>
 
             <Typography variant="body" className="text-lg max-w-lg">
-              Holistyczna dermatologia estetyczna i zaawansowana laseroterapia.
+              Holistyczna kosmetologia estetyczna i zaawansowana laseroterapia.
               Dedykowana opieka i natychmiastowy blask cery.
             </Typography>
 
             <div className="flex items-center gap-3 pt-1 border border-neutral-200/60 rounded-full py-1.5 px-4 w-fit bg-white/50 backdrop-blur-sm shadow-sm">
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-neutral-900 text-neutral-900" />
+                  <Star
+                    key={i}
+                    className="h-3.5 w-3.5 fill-neutral-900 text-neutral-900"
+                  />
                 ))}
               </div>
               <div className="text-[13px] font-sans">
-                <span className="font-semibold text-neutral-900">5.0 / 5.0</span>
-                <span className="text-neutral-500"> na Booksy (ponad 650 opinii)</span>
+                <span className="font-semibold text-neutral-900">
+                  5.0 / 5.0
+                </span>
+                <span className="text-neutral-500">
+                  {" "}
+                  na Booksy (ponad 650 opinii)
+                </span>
               </div>
             </div>
 
@@ -50,7 +69,7 @@ export function Hero() {
               </Button>
               <Button asChild variant="secondary" size="lg">
                 <Link href="/oferta">
-                  Poznaj rytuały
+                  Sprawdź ofertę
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -86,7 +105,7 @@ export function Hero() {
                     Chorzów • Gałeczki 30
                   </p>
                   <p className="font-sans text-[11px] text-neutral-500">
-                    Oaza spokoju i regeneracji
+                    Depilcaja i pielęgnacja
                   </p>
                 </div>
               </div>

@@ -24,18 +24,18 @@ const galleryItems = [
   },
   {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCSqZj_jK7QgUH4lnPaHVR-GvCx2fwhzc9Po_jroi-AzatI6bK43lFrSNZwi73tNwuiNM0EowhinmpymlKxoTssaGNlU2W2wula6ogWxIH5YJpAUuxp7bwXT1-58SqYConEkyU9BC87Xg8H2G3Uj8QCUyUT8wt4LbT9BHFQdzFOP4A8UY3RkCbvyTUJmntcn01Pm1QZP5Rx0Gf-FLRHuZwsXPEFYt9tf2-s-WngaXoR-9svONWhKEP7IQ",
-    alt: "Rytuał Gorących Kamieni Wulkanicznych",
-    label: "Ciało & Zmysły",
-    title: "Rytuał Gorących Kamieni Wulkanicznych",
+    alt: "Zdrowe stopy i paznokcie",
+    label: "Podologia",
+    title: "Zdrowe stopy i paznokcie",
     icon: <Sparkles className="h-5 w-5 text-neutral-900" />,
     span: "md:col-span-6",
     tall: false,
   },
   {
     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAelaGZbjn0jIK5-t-ca_gqRoMBN4_a7nj__F61AniTatjAiJV8iWI-_xbbdMhbvq99pbKOjJCUYk3qvAd89dRv3xnRnNAW4pPHcx1m9OJUtYic8hmezQ7mOCPxUWEiofw7WAq3esfVD16lS-Tim2-RYr7wh3PhdpNGcpjSiMlzupXDExXOGM8xrc1PRK1cXhmZyGo_yFhruyZEDPEoOoP47DNlISKxdjCjs9YAy2cvL1pufGD4T0hORQ",
-    alt: "Czyste Ekstrakty Botaniczne & Serum",
+    alt: "Profesjonalne kosmetyki do pielęgnacji domowej",
     label: "Pielęgnacja Skóry",
-    title: "Czyste Ekstrakty Botaniczne & Serum",
+    title: "Profesjonalne kosmetyki do pielęgnacji domowej",
     icon: <Leaf className="h-5 w-5 text-neutral-900" />,
     span: "md:col-span-6",
     tall: false,
@@ -58,7 +58,8 @@ export function Atmosphere() {
             </Typography>
             <Typography variant="body" className="mt-1 max-w-xl">
               Kojąca przestrzeń stworzona do głębokiego wyciszenia, w której
-              zaawansowane procedury medyczne łączą się z sensorycznym relaksem.
+              zaawansowane procedury kosmetologiczne łączą się z sensorycznym
+              relaksem.
             </Typography>
           </div>
           <div className="flex items-center gap-4 text-[11px] font-semibold uppercase tracking-wider text-neutral-500 font-sans">

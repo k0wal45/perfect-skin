@@ -38,7 +38,10 @@ export function Founders() {
               Autorska Filozofia
             </div>
 
-            <Typography variant="h2" className="text-[28px] leading-[36px] lg:text-[40px] lg:leading-[48px] tracking-tight">
+            <Typography
+              variant="h2"
+              className="text-[28px] leading-[36px] lg:text-[40px] lg:leading-[48px] tracking-tight"
+            >
               Medyczna wiedza.
               <br />
               <span className="italic text-neutral-900">
@@ -47,17 +50,14 @@ export function Founders() {
             </Typography>
 
             <div className="p-4 bg-white border-l-4 border-neutral-900">
-              <Typography variant="h3" className="text-[16px] italic text-neutral-900 leading-snug">
+              <Typography
+                variant="h3"
+                className="text-[16px] italic text-neutral-900 leading-snug"
+              >
                 „Tworzymy bezpieczną przystań, w której nauka o skórze wspiera
                 Twoją naturalną pewność siebie.&rdquo;
               </Typography>
             </div>
-
-            <Typography variant="body" className="text-neutral-600">
-              Od ponad dekady łączymy zaawansowaną diagnostykę z kojącą
-              atmosferą. Bez bólu, bez agresywnych protokołów, ze 100%
-              spersonalizowaną troską.
-            </Typography>
 
             <div className="grid grid-cols-2 gap-4 pt-2 w-full">
               <div className="p-4 bg-white">

@@ -12,19 +12,19 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    text: `„Pani Monika wyleczyła mój trądzik różowaty, z którym walczyłam bezskutecznie przez 4 lata. Niezwykle profesjonalne podejście, delikatność i plan domowy, który wreszcie działa!"`,
-    name: "Katarzyna W.",
-    treatment: "Zabieg: Terapia wyciszająca rumień",
+    text: `„Z całego serca polecam ten salon! Już od momentu wejścia można poczuć wyjątkowo przyjazną i spokojną atmosferę, która sprawia, że człowiek od razu czuje się swobodnie i zaopiekowany."`,
+    name: "Karolina",
+    treatment: "Zabieg: Pedicure podologiczny",
   },
   {
-    text: `„Cudowna atmosfera, wspaniały zapach i nienaganna czystość. Zabieg stymulatorami pod oczy przyniósł efekt wypoczętego spojrzenia już po 2 tygodniach. Szczerze polecam każdemu."`,
-    name: "Agnieszka S.",
-    treatment: "Zabieg: Biostymulacja okolicy oka",
+    text: `„Bardzo polecam ten gabinet! Usunięcie brodawki przebiegło szybko, sprawnie i całkowicie bezboleśnie."`,
+    name: "Małgorzata",
+    treatment: "Zabieg: Usuwanie brodawek wirusowych",
   },
   {
-    text: `„Pedicure podologiczny wykonany z chirurgiczną precyzją. Ulga po pierwszej wizycie z bolesnym odciskiem była natychmiastowa. Pani Małgorzata ma złote ręce!"`,
-    name: "Marta D.",
-    treatment: "Zabieg: Podologia specjalistyczna",
+    text: `„Wizyta przebiegła rewelacyjnie, wszystko sprawnie, bezboleśnie, Pani wykonująca zabieg przekazała mi wiele cennych informacji, jak i wskazówek, polecam serdecznie i pozdrawiam"`,
+    name: "Natalia",
+    treatment: "Zabieg: Pedicure podologiczny",
   },
 ];
 
@@ -46,14 +46,12 @@ export function Reviews() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-100 text-neutral-900 mb-3">
             <Star className="h-4 w-4 fill-neutral-900" />
-            <span className="font-sans text-sm font-bold">4.97 / 5.0</span>
+            <span className="font-sans text-sm font-bold">5.0 / 5.0</span>
             <span className="text-neutral-500 font-normal text-xs">
-              • Weryfikowane opinie Booksy
+              • Ponad 650 opinii na Booksy
             </span>
           </div>
-          <Typography variant="h2">
-            Zaufanie, które widać na skórze
-          </Typography>
+          <Typography variant="h2">Zaufanie, które widać na skórze</Typography>
           <Typography variant="body" className="mt-2">
             Przeczytaj doświadczenia osób, które powierzyły nam terapię swojej
             cery.
@@ -75,10 +73,15 @@ export function Reviews() {
               </div>
               <div className="mt-6 pt-4 flex items-center justify-between text-neutral-500">
                 <div>
-                  <Typography variant="label" className="font-semibold text-neutral-900 block">
+                  <Typography
+                    variant="label"
+                    className="font-semibold text-neutral-900 block"
+                  >
                     {r.name}
                   </Typography>
-                  <Typography variant="bodyMuted" className="text-[11px]">{r.treatment}</Typography>
+                  <Typography variant="bodyMuted" className="text-[11px]">
+                    {r.treatment}
+                  </Typography>
                 </div>
                 <ShieldCheck className="h-5 w-5 text-neutral-400" />
               </div>
@@ -103,7 +106,9 @@ export function Reviews() {
             </div>
           </div>
           <Button asChild className="shrink-0 shadow-sm">
-            <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer">Zarezerwuj na Booksy</a>
+            <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer">
+              Zarezerwuj na Booksy
+            </a>
           </Button>
         </div>
       </Container>

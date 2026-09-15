@@ -1,6 +1,12 @@
 import { Container } from "@/components/ui/container";
 import { Typography } from "@/components/ui/typography";
-import { Stethoscope, Microscope, Flower2, FlaskConical, ShieldCheck } from "lucide-react";
+import {
+  Stethoscope,
+  Microscope,
+  Flower2,
+  FlaskConical,
+  ShieldCheck,
+} from "lucide-react";
 
 export function AboutPhilosophy() {
   return (
@@ -22,54 +28,57 @@ export function AboutPhilosophy() {
           {/* Pillar 1 */}
           <div className="bg-surface-lowest p-8 lg:p-10 shadow-sm flex flex-col justify-between relative">
             <div className="flex items-baseline justify-between mb-4">
-              <span className="font-serif text-[40px] text-primary font-normal">01</span>
+              <span className="font-serif text-[40px] text-primary font-normal">
+                01
+              </span>
               <Stethoscope className="h-7 w-7 text-neutral-900" />
             </div>
             <div>
-              <Typography variant="h3" className="mb-2 text-[22px]">Aseptyka Szpitalna</Typography>
-              <Typography variant="body" className="text-[13px] mb-4">
-                Własny autoklaw medyczny Klasy B. Jednorazowe kartridże otwierane w obecności pacjenta. 100% sterylności procedur.
+              <Typography variant="h3" className="mb-2 text-[22px]">
+                Aseptyka Szpitalna
               </Typography>
-            </div>
-            <div className="pt-4 border-t border-surface-container flex items-center justify-between text-[11px] text-neutral-900 font-semibold font-sans">
-              <span>Standard ISO/EN</span>
-              <span>100% Aseptyki</span>
+              <Typography variant="body" className="text-[13px] mb-4">
+                Własny autoklaw medyczny Klasy B. Jednorazowe kartridże
+                otwierane w obecności pacjenta. 100% sterylności procedur.
+              </Typography>
             </div>
           </div>
 
           {/* Pillar 2 */}
           <div className="bg-surface-lowest p-8 lg:p-10 shadow-sm flex flex-col justify-between relative">
             <div className="flex items-baseline justify-between mb-4">
-              <span className="font-serif text-[40px] text-primary font-normal">02</span>
+              <span className="font-serif text-[40px] text-primary font-normal">
+                02
+              </span>
               <Microscope className="h-7 w-7 text-neutral-900" />
             </div>
             <div>
-              <Typography variant="h3" className="mb-2 text-[22px]">Czyste Formuły</Typography>
-              <Typography variant="body" className="text-[13px] mb-4">
-                Wyłącznie czynniki wzrostu estGen i certyfikowane kosmeceutyki Klapp Skin Science. Wolne od drażniących parabenów i alergenów.
+              <Typography variant="h3" className="mb-2 text-[22px]">
+                Zaawansowana pielęgnacja
               </Typography>
-            </div>
-            <div className="pt-4 border-t border-surface-container flex items-center justify-between text-[11px] text-neutral-900 font-semibold font-sans">
-              <span>Certyfikaty Medyczne</span>
-              <span>Clean Clinical</span>
+              <Typography variant="body" className="text-[13px] mb-4">
+                Preparaty terapeutyczne estGen. Profesjonalne kosmetyki firmy
+                KLAPP
+              </Typography>
             </div>
           </div>
 
           {/* Pillar 3 */}
           <div className="bg-surface-lowest p-8 lg:p-10 shadow-sm flex flex-col justify-between relative">
             <div className="flex items-baseline justify-between mb-4">
-              <span className="font-serif text-[40px] text-primary font-normal">03</span>
+              <span className="font-serif text-[40px] text-primary font-normal">
+                03
+              </span>
               <Flower2 className="h-7 w-7 text-neutral-900" />
             </div>
             <div>
-              <Typography variant="h3" className="mb-2 text-[22px]">Naturalna Harmonia</Typography>
-              <Typography variant="body" className="text-[13px] mb-4">
-                Regeneracja bez przerysowania rysów twarzy. Stymulujemy własne mechanizmy naprawcze skóry i syntezę kolagenu.
+              <Typography variant="h3" className="mb-2 text-[22px]">
+                Najnowsze technologie
               </Typography>
-            </div>
-            <div className="pt-4 border-t border-surface-container flex items-center justify-between text-[11px] text-neutral-900 font-semibold font-sans">
-              <span>Fizjologia Skóry</span>
-              <span>Natural Look</span>
+              <Typography variant="body" className="text-[13px] mb-4">
+                Terapia światłem IPL i BBL, szeroki wachlarz laseroterapii i
+                zabiegów depilacyjnych
+              </Typography>
             </div>
           </div>
         </div>

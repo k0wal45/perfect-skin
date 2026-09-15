@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { Typography } from "@/components/ui/typography";
-import { Award, Zap, ThumbsUp, SprayCan, Check } from "lucide-react";
+import { YEARSOFWORK } from "@/lib/constants";
+import { Award, Zap, SprayCan, Check } from "lucide-react";
 import type { ReactNode } from "react";
 
 type Pillar = {
@@ -13,10 +14,10 @@ type Pillar = {
 
 const pillars: Pillar[] = [
   {
-    stat: "12+",
+    stat: `${YEARSOFWORK}+`,
     icon: <Award className="h-5 w-5 text-neutral-900" />,
     title: "Lat dojrzałej praktyki",
-    description: "Tytuły magistra kosmetologii i podologii klinicznej.",
+    description: "Tytuły kosmetologa i podologa.",
     badge: "Gwarancja wiedzy",
   },
   {
@@ -25,13 +26,6 @@ const pillars: Pillar[] = [
     title: "Platformy laserowe",
     description: "Medyczna certyfikacja FDA & CE Medical.",
     badge: "Precyzja i bezpieczeństwo",
-  },
-  {
-    stat: "98%",
-    icon: <ThumbsUp className="h-5 w-5 text-neutral-900" />,
-    title: "Efektywności terapii",
-    description: "Indywidualny plan opieki gabinetowej i domowej.",
-    badge: "Beauty plan 1-na-1",
   },
   {
     stat: "100%",
@@ -46,17 +40,22 @@ export function Pillars() {
   return (
     <section className="py-12 bg-surface-container-low/60">
       <Container>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {pillars.map((p) => (
             <div
               key={p.title}
               className="p-6 bg-white shadow-sm flex flex-col justify-between border-t-2 border-neutral-900"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="font-serif text-4xl text-neutral-900">{p.stat}</span>
+                <span className="font-serif text-4xl text-neutral-900">
+                  {p.stat}
+                </span>
                 {p.icon}
               </div>
-              <Typography variant="h3" className="text-[22px] leading-[30px] mb-1">
+              <Typography
+                variant="h3"
+                className="text-[22px] leading-[30px] mb-1"
+              >
                 {p.title}
               </Typography>
               <Typography variant="body" className="text-[13px]">

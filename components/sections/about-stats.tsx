@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { Typography } from "@/components/ui/typography";
+import { YEARSOFWORK } from "@/lib/constants";
 import { Star } from "lucide-react";
 
 export function AboutStats() {
@@ -11,16 +12,17 @@ export function AboutStats() {
             {/* Stat 1 */}
             <div className="flex flex-col items-center p-4">
               <div className="font-serif text-4xl lg:text-[56px] text-neutral-900 font-normal mb-2">
-                12+
+                {YEARSOFWORK}+
               </div>
               <Typography variant="h3" className="mb-2 text-[20px]">
                 Lat Praktyki Klinicznej
               </Typography>
               <Typography variant="body" className="text-[13px] max-w-xs">
-                Setki godzin szkoleń kongresowych, studiów podyplomowych i tysiące przeprowadzonych rytuałów kosmetologicznych.
+                Setki godzin szkoleń, studiów wyższych i tysiące
+                przeprowadzonych zabiegów kosmetologicznych.
               </Typography>
             </div>
-            
+
             {/* Stat 2 */}
             <div className="flex flex-col items-center p-4">
               <div className="flex items-center gap-1 mb-2">
@@ -33,20 +35,22 @@ export function AboutStats() {
                 Zweryfikowanych Opinii 5.0
               </Typography>
               <Typography variant="body" className="text-[13px] max-w-xs">
-                Zaufanie pacjentek ze Śląska i całego kraju, które powracają do nas po spokój i bezkompromisową jakość.
+                Zaufanie pacjentek ze Śląska i całego kraju, które powracają do
+                nas po spokój i bezkompromisową jakość.
               </Typography>
             </div>
 
             {/* Stat 3 */}
             <div className="flex flex-col items-center p-4">
               <div className="font-serif text-4xl lg:text-[56px] text-neutral-900 font-normal mb-2">
-                100%
+                4-6
               </div>
               <Typography variant="h3" className="mb-2 text-[20px]">
-                Certyfikacja CE Medical
+                Zabiegów do Idealnej Gładkości
               </Typography>
               <Typography variant="body" className="text-[13px] max-w-xs">
-                Każde urządzenie i koktajl mezoterapeutyczny spełniają rygorystyczne normy europejskie dla wyrobów medycznych.
+                Precyzyjnie dobrane parametry lasera medycznego nowej generacji,
+                gwarantujące trwały efekt i maksymalny komfort skóry.
               </Typography>
             </div>
           </div>

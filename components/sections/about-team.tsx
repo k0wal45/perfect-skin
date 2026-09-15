@@ -20,7 +20,7 @@ export function AboutTeam() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-surface-container-high/90 via-transparent to-transparent pointer-events-none" />
-              
+
               <div className="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div className="bg-surface-bright/95 backdrop-blur-md p-6 border border-surface-container max-w-xl">
                   <Typography variant="sectionSubtitle" className="mb-1 block">
@@ -30,12 +30,14 @@ export function AboutTeam() {
                     Monika &amp; Małgorzata
                   </Typography>
                   <Typography variant="body" className="text-[13px]">
-                    Współwłaścicielki i pasjonatki zaawansowanej kosmetologii klinicznej. Połączyły wiedzę akademicką, medyczną precyzję oraz bezkompromisowy szacunek do naturalnej architektury skóry.
+                    Współwłaścicielki i pasjonatki zaawansowanej kosmetologii.
+                    Połączyły wiedzę akademicką, precyzję oraz bezkompromisowy
+                    szacunek do naturalnej architektury skóry.
                   </Typography>
                 </div>
                 <div className="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white font-sans text-[11px] tracking-wider uppercase shadow-md">
                   <ShieldCheck className="h-5 w-5" />
-                  Ekspertki Kosmetologii Klinicznej
+                  Ekspertki Kosmetologii
                 </div>
               </div>
             </div>
@@ -53,7 +55,7 @@ export function AboutTeam() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-md text-neutral-500 font-sans text-[11px] uppercase tracking-wider font-medium">
-                  Kosmetologia Estetyczna
+                  Kosmetolog i Linergistka
                 </div>
               </div>
               <div className="sm:w-1/2 p-6 lg:p-8 flex flex-col justify-between bg-surface-container-low/40">
@@ -61,20 +63,28 @@ export function AboutTeam() {
                   <span className="font-sans text-[11px] text-neutral-500 uppercase tracking-wider font-semibold block">
                     Współwłaścicielka
                   </span>
-                  <Typography variant="h3" className="text-[26px]">Monika</Typography>
-                  <p className="font-sans text-[13px] text-neutral-600 font-medium">
-                    Dyplomowany Kosmetolog &amp; Architekt Twarzy
+                  <Typography variant="h3" className="text-[26px]">
+                    Monika
+                  </Typography>
+                  <p className="font-sans text-[13px] text-neutral-600 font-medium mb-4">
+                    Dyplomowany Kosmetolog &amp; Linergistka
                   </p>
-                  <blockquote className="italic text-neutral-500 text-[13px] border-l-2 border-neutral-200 pl-3 my-4 font-sans">
-                    „Niezwykła precyzja, dbałość o każdy detal i podkreślenie naturalnego rysu bez przerysowania.”
-                  </blockquote>
+                  {/* <blockquote className="italic text-neutral-500 text-[13px] border-l-2 border-neutral-200 pl-3 my-4 font-sans">
+                    „Niezwykła precyzja, dbałość o każdy detal i podkreślenie
+                    naturalnego rysu bez przerysowania.”
+                  </blockquote> */}
                 </div>
                 <div className="pt-4 border-t border-surface-container">
                   <span className="font-sans text-[11px] text-tertiary uppercase tracking-wider block mb-2 font-medium">
                     Główne specjalizacje:
                   </span>
                   <ul className="space-y-1.5 font-sans text-[13px] text-neutral-900">
-                    {["Kosmetologia Estetyczna & Stymulatory", "Makijaż Permanentny (Linergistka)", "Zaawansowana Architektura Oka", "Biorewitalizacja Komórkowa"].map(spec => (
+                    {[
+                      "Kosmetologia Estetyczna & Stymulatory",
+                      "Makijaż Permanentny (Linergistka)",
+                      "Zaawansowana Architektura Oka",
+                      "Biorewitalizacja Komórkowa",
+                    ].map((spec) => (
                       <li key={spec} className="flex items-center gap-1.5">
                         <CheckCircle2 className="h-4 w-4 text-primary" />
                         {spec}
@@ -83,8 +93,16 @@ export function AboutTeam() {
                   </ul>
                 </div>
                 <div className="mt-4 pt-2">
-                  <Button asChild className="w-full text-[12px] bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white" variant="ghost">
-                    <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    asChild
+                    className="w-full text-[12px] bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white"
+                    variant="ghost"
+                  >
+                    <a
+                      href={BOOKSY_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <span>Umów wizytę u Moniki</span>
                       <ArrowRight className="h-4 w-4" />
                     </a>
@@ -102,7 +120,7 @@ export function AboutTeam() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-md text-neutral-500 font-sans text-[11px] uppercase tracking-wider font-medium">
-                  Dermatoterapia &amp; Podologia
+                  Kosmetolog i Podolog
                 </div>
               </div>
               <div className="sm:w-1/2 p-6 lg:p-8 flex flex-col justify-between bg-surface-container-low/40">
@@ -110,20 +128,28 @@ export function AboutTeam() {
                   <span className="font-sans text-[11px] text-neutral-500 uppercase tracking-wider font-semibold block">
                     Współwłaścicielka
                   </span>
-                  <Typography variant="h3" className="text-[26px]">Małgorzata</Typography>
-                  <p className="font-sans text-[13px] text-neutral-600 font-medium">
-                    Kosmetolog &amp; Specjalista Podologii Medycznej
+                  <Typography variant="h3" className="text-[26px]">
+                    Małgorzata
+                  </Typography>
+                  <p className="font-sans text-[13px] text-neutral-600 font-medium mb-4">
+                    Kosmetolog &amp; Specjalista Podologii
                   </p>
-                  <blockquote className="italic text-neutral-500 text-[13px] border-l-2 border-neutral-200 pl-3 my-4 font-sans">
-                    „Pasja do trudnych przypadków dermatologicznych i przywracania pełnego komfortu stóp i skóry.”
-                  </blockquote>
+                  {/* <blockquote className="italic text-neutral-500 text-[13px] border-l-2 border-neutral-200 pl-3 my-4 font-sans">
+                    „Pasja do trudnych przypadków dermatologicznych i
+                    przywracania pełnego komfortu stóp i skóry.”
+                  </blockquote> */}
                 </div>
                 <div className="pt-4 border-t border-surface-container">
                   <span className="font-sans text-[11px] text-tertiary uppercase tracking-wider block mb-2 font-medium">
                     Główne specjalizacje:
                   </span>
                   <ul className="space-y-1.5 font-sans text-[13px] text-neutral-900">
-                    {["Podologia Medyczna & Wrastające Paznokcie", "Laseroterapia CO2, Tulowa & Piko", "Terapie Trądziku & Kwasowe estGen", "Odbudowa Bariery Naskórkowej"].map(spec => (
+                    {[
+                      "Podologia Medyczna & Wrastające Paznokcie",
+                      "Laseroterapia CO2, Tulowa & Piko",
+                      "Terapie Trądziku & Kwasowe estGen",
+                      "Odbudowa Bariery Naskórkowej",
+                    ].map((spec) => (
                       <li key={spec} className="flex items-center gap-1.5">
                         <CheckCircle2 className="h-4 w-4 text-primary" />
                         {spec}
@@ -132,8 +158,16 @@ export function AboutTeam() {
                   </ul>
                 </div>
                 <div className="mt-4 pt-2">
-                  <Button asChild className="w-full text-[12px] bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white" variant="ghost">
-                    <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    asChild
+                    className="w-full text-[12px] bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white"
+                    variant="ghost"
+                  >
+                    <a
+                      href={BOOKSY_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <span>Umów wizytę u Małgorzaty</span>
                       <ArrowRight className="h-4 w-4" />
                     </a>

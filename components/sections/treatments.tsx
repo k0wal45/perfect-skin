@@ -8,11 +8,11 @@ import { getAllOferty } from "@/lib/oferty";
 
 export function Treatments() {
   const all = getAllOferty();
-  
+
   // Find 4 distinct categories for variety
   const selectedOferty: import("@/lib/oferty").Oferta[] = [];
   const seenCategories = new Set<string>();
-  
+
   for (const item of all) {
     if (!seenCategories.has(item.kategoria)) {
       seenCategories.add(item.kategoria);
@@ -20,10 +20,10 @@ export function Treatments() {
     }
     if (selectedOferty.length === 4) break;
   }
-  
+
   // Fallback to first 4 if we somehow don't have 4 categories
   while (selectedOferty.length < 4 && selectedOferty.length < all.length) {
-    const nextItem = all.find(i => !selectedOferty.includes(i));
+    const nextItem = all.find((i) => !selectedOferty.includes(i));
     if (nextItem) selectedOferty.push(nextItem);
     else break;
   }
@@ -38,7 +38,7 @@ export function Treatments() {
               Spersonalizowana Karta Zabiegów
             </Typography>
             <Typography variant="h2" className="mt-2">
-              Zabiegi Kosmetyczne Chorzów – Nasza Oferta
+              Zabiegi Kosmetologiczne Chorzów - Nasza Oferta
             </Typography>
             <Typography variant="body" className="mt-1">
               Celowane protokoły kliniczne dla natychmiastowej poprawy kondycji
@@ -66,17 +66,29 @@ export function Treatments() {
                   <span className="px-2.5 py-1 bg-neutral-100 font-semibold text-neutral-500 uppercase text-[10px] tracking-wider truncate max-w-[65%]">
                     {t.kategoria}
                   </span>
-                  <span className="font-medium shrink-0">{t.czas_trwania_min} min</span>
+                  <span className="font-medium shrink-0">
+                    {t.czas_trwania_min} min
+                  </span>
                 </div>
 
-                <Typography variant="h3" className="text-[20px] leading-[26px] mb-3 line-clamp-2">
-                  <Link href={`/oferta/${t.slug}`} className="hover:text-neutral-900 transition-colors">
+                <Typography
+                  variant="h3"
+                  className="text-[20px] leading-6.5 mb-3 line-clamp-2"
+                >
+                  <Link
+                    href={`/oferta/${t.slug}`}
+                    className="hover:text-neutral-900 transition-colors"
+                  >
                     {t.nazwa_uslugi}
                   </Link>
                 </Typography>
 
-                <Typography variant="body" className="text-[13px] mb-6 line-clamp-3">
-                  {t.opis || "Zapraszamy do zapoznania się ze szczegółami zabiegu w naszym gabinecie. Dbamy o najwyższe standardy kosmetologiczne."}
+                <Typography
+                  variant="body"
+                  className="text-[13px] mb-6 line-clamp-3"
+                >
+                  {t.opis ||
+                    "Zapraszamy do zapoznania się ze szczegółami zabiegu w naszym gabinecie. Dbamy o najwyższe standardy kosmetologiczne."}
                 </Typography>
               </div>
 
@@ -90,8 +102,16 @@ export function Treatments() {
                     <span className="font-sans text-[14px]">zł</span>
                   </span>
                 </div>
-                <Button asChild className="w-full text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white" variant="ghost">
-                  <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  className="w-full text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white"
+                  variant="ghost"
+                >
+                  <a
+                    href={BOOKSY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Rezerwuj
                     <ChevronRight className="h-4 w-4" />
                   </a>
