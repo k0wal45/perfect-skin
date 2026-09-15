@@ -117,10 +117,10 @@ export function Hero() {
                 </div>
                 <div>
                   <p className="font-serif text-[14px] font-bold text-neutral-900">
-                    Standard Medyczny
+                    Nowe technologie
                   </p>
                   <p className="font-sans text-[11px] text-neutral-500">
-                    Bezpieczeństwo FDA
+                    Lasery chłodzące
                   </p>
                 </div>
               </div>
